@@ -50,4 +50,13 @@ server.listen(port, () => console.log(`Running on port ${port}`));
 #10. npm run server
 Can make a GET request to localhost:5000 on Postman to make sure its working. Should return "It's alive!"
 
+#11. npm add knex sqlite3
 
+#12. knex init 
+ <!-- creates knexfile.js-->
+
+ #13. Update knex.js file to match your config settings
+
+ #14. Add a data folder 
+
+ 
