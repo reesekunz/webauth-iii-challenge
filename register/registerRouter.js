@@ -10,7 +10,6 @@ const router = express.Router();
 // POST to 5000/api/register
 // 	Creates a user using the information sent inside the body of the request.
 // Hash the password before saving the user to the database.
-
 router.post("/", (request, response) => {
   let user = request.body;
   const hash = bcrypt.hashSync(user.password, 10); // 2 ^ n

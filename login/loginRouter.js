@@ -2,7 +2,8 @@ const express = require("express");
 
 const Users = require("../helpers/usersModel");
 const bcrypt = require("bcryptjs");
-const db = require("../data/db-config");
+const db = require("../database/dbConfig");
+const generateToken = require("../auth/generateToken");
 
 const router = express.Router();
 

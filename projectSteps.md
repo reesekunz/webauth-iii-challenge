@@ -13,6 +13,7 @@
  <!-- installs nodemon as dev dependency -->
 
 #6. npm i bcryptjs
+npm install bcrypt
 
 #7. Add scripts to package.json
 "scripts": {
@@ -123,3 +124,20 @@ import this into each router
 #25. Build out loginRouter.js
 
 #26. Build out usersRouter.js
+
+#27. Create auth folder
+inside auth folder => middleware.js
+
+#28. npm i jsonwebtoken
+
+#28. Build out middleware.js file
+import into usersRouter - can now GET users only if you have valid credentials (valid token)
+
+#29. Create config folder
+inside config folder => secrets.js
+
+#30. Build out secrets.js
+import secrets into middleware.js and generateToken.js (create next)
+
+#31. inside auth folder => create and build out generateToken.js file
+generateToken will be imported into login and register routers
