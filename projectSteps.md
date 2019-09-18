@@ -20,6 +20,34 @@
 "start": "node index.js"
 },
 
-8. Add and build out server.js
+#8. Add and build out server.js
+const express = require("express");
 
-9. Add and build out index.js
+// const usersRouter = require("./users/usersRouter");
+// const registerRouter = require("./register/registerRouter");
+// const loginRouter = require("./login/loginRouter");
+
+const server = express();
+
+server.use(express.json());
+
+// server.use("/api/users", usersRouter);
+// server.use("/api/register", registerRouter);
+// server.use("/api/login", loginRouter);
+
+server.get("/", (request, response) => {
+response.send("It's alive!");
+});
+
+module.exports = server;
+
+#9. Add and build out index.js
+const server = require("./server");
+
+const port = process.env.PORT || 5000;
+server.listen(port, () => console.log(`Running on port ${port}`));
+
+#10. npm run server
+Can make a GET request to localhost:5000 on Postman to make sure its working. Should return "It's alive!"
+
+
