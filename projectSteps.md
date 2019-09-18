@@ -52,11 +52,25 @@ Can make a GET request to localhost:5000 on Postman to make sure its working. Sh
 
 #11. npm add knex sqlite3
 
-#12. knex init 
+#12. knex init
+
  <!-- creates knexfile.js-->
 
- #13. Update knex.js file to match your config settings
+#13. Update knex.js file to match your config settings
 
- #14. Add a data folder 
+#14. Add a database folder
 
- 
+#15. knex migrate:make users-table
+
+ <!-- this makes a migrations folder inside the database folder, as well as a file named users-table where you will create the table migrations inside -->
+
+#16. Add and build out db-config.js file inside the database folder
+
+#17. Plan out your tables in the data model, specifically how the foreign keys/primary keys and each table is connected with each other (if they are)
+
+#18. Build out migrations tables to match data model and requirements
+
+#19. knex migrate:latest
+
+ <!-- will make sure migrations are up to date as well as create a recipes.db3 file
+if need to make changes to migrations, knex migrate:rollback then migrate latest again to update -->
