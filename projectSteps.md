@@ -136,15 +136,10 @@ inside config folder => secrets.js
 #30. Build out secrets.js
 import secrets into middleware.js and generateToken.js (create next)
 
-<!-- Ended up just making generateToken function in loginRouter instead of separate file so need to import secrets there as well-->
-
 #31. Build out middleware.js file
 import into usersRouter - can now GET users only if you have valid credentials (valid token)
 
 #31. inside auth folder => create and build out generateToken.js file
-
-<!-- Ended up just making generateToken function in loginRouter instead-->
-
 generateToken will be imported into login and register routers
 
 #32. Try to register a POST to 5000/api/register on Postman
@@ -168,4 +163,4 @@ key value
 Content-Type application/json
 authorization eyiJDFLKJDSFLJjf;dklsjfblahblahb8
 
-Now you should be able to make a GET request to /api/users only when you are logged in/credentials are provided with the token
+<!--Now you should be able to make a GET request to /api/users only when you are logged in/credentials are provided with the token -->

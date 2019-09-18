@@ -3,10 +3,7 @@ const express = require("express");
 const Users = require("../helpers/usersModel");
 const bcrypt = require("bcryptjs");
 const db = require("../database/dbConfig");
-// const generateToken = require("../auth/generateToken");
-
-const jwt = require("jsonwebtoken");
-const secrets = require("../config/secrets");
+const generateToken = require("../auth/generateToken");
 
 const router = express.Router();
 
@@ -33,15 +30,5 @@ router.post("/", (request, response) => {
     });
 });
 
-function generateToken(user) {
-  const payload = {
-    username: user.username
-  };
-  // const secret = "keep it secret, keep it safe!"; => importing this from config/secrets instead
-  const options = {
-    expiresIn: "1d"
-  };
-  return jwt.sign(payload, secrets.jwtSecret, options);
-}
 
 module.exports = router;
