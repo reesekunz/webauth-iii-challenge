@@ -7,7 +7,7 @@ exports.up = function(knex) {
       .notNullable()
       .unique();
     column.string("password", 128).notNullable();
-    column.string("department", 128).notNullable();
+    column.string("department", 128)
   });
 };
 

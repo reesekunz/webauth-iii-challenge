@@ -10,8 +10,9 @@ module.exports = {
 function find() {
   return db("users").select(
     "id",
-    "username"
+    "username",
     //   "password" - dont want to select password since dont want to display a users password
+    "department"
   );
 }
 

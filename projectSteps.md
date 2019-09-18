@@ -130,14 +130,42 @@ inside auth folder => middleware.js
 
 #28. npm i jsonwebtoken
 
-#28. Build out middleware.js file
-import into usersRouter - can now GET users only if you have valid credentials (valid token)
-
 #29. Create config folder
 inside config folder => secrets.js
 
 #30. Build out secrets.js
 import secrets into middleware.js and generateToken.js (create next)
 
+<!-- Ended up just making generateToken function in loginRouter instead of separate file so need to import secrets there as well-->
+
+#31. Build out middleware.js file
+import into usersRouter - can now GET users only if you have valid credentials (valid token)
+
 #31. inside auth folder => create and build out generateToken.js file
+
+<!-- Ended up just making generateToken function in loginRouter instead-->
+
 generateToken will be imported into login and register routers
+
+#32. Try to register a POST to 5000/api/register on Postman
+{
+"username": "Reese",
+"password": "password",
+"department": "sales"
+}
+// should register a user with an encrypted password
+
+#33. Try to login with a POST to 5000/api/login using same credentials you used to register
+should be receiving a token on a successful login
+
+#34. Take that login token without the " " and set it for your headers in postman to use for your GET request
+should look like
+
+key value
+
+---
+
+Content-Type application/json
+authorization eyiJDFLKJDSFLJjf;dklsjfblahblahb8
+
+Now you should be able to make a GET request to /api/users only when you are logged in/credentials are provided with the token
